@@ -5,8 +5,10 @@ int interpolSearch(int numbers[], int lo, int high, int key, int cnt)
 {
     while (lo<=high && key >= numbers[lo] && key <= numbers[high])
     {  
+        
         cout << "Number of try: "<< cnt << endl;
         int pos = lo + (((double)(high - lo)/ (numbers[high]- numbers[lo]))*(key - numbers[lo]));
+        cout << "Position: " << pos << endl;
         if (numbers[pos] == key)
         {
             return pos;
